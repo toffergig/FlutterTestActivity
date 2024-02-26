@@ -15,4 +15,8 @@ class Counter {
   void decrementCount(){
     _count--;
   }
+
+  void resetCount(){
+    throw UnimplementedError();
+  }
 }
