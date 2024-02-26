@@ -28,12 +28,13 @@ main(){
     expect(counter.count, 1);
   });
 
-    test('Given Counter class is instantiated, when decrementCount is called, then count = -1', () {
+    test('Given Counter class is instantiated, when decrementCount is called, then count = 0', () {
       
 
       counter.decrementCount();
 
-      expect(counter.count, -1);
+      expect(counter.count, 0);
+
     });
 
     test('Given Counter class is instantiated, when incrementCount is called and resetCount is called, then count = 0', () {
@@ -43,6 +44,23 @@ main(){
       expect(counter.count, 0);
 
     });
+
+
+    test('Given Counter class is instantiated, when incrementCount is called 4 times, then count increase to 1, 3, 6 and 10', () {
+
+      counter.incrementCount();
+      expect(counter.count, 1);
+      
+      counter.incrementCount();
+      expect(counter.count, 3);
+
+      counter.incrementCount();
+      expect(counter.count, 6);
+
+      counter.incrementCount();
+      expect(counter.count, 10);
+    });
+
 
     });
   
